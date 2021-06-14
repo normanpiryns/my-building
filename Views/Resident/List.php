@@ -1,6 +1,6 @@
 
 
-<p>bonjour</p>
+
 
 <?php if (!empty($resident)): ?>
 
