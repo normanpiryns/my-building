@@ -1,6 +1,6 @@
 <?php
 
-include("C:\wamp\www\MyBuilding\Views\Templates\head.php");
+
 
 $resident = new ResidentDAO();
 
@@ -54,6 +54,6 @@ if (isset($_POST['submit'])) {
     </ul>
 </form>
 
-<?php  include('C:\wamp\www\MyBuilding\Views\Templates\footer.php');
-?>
+
+
 

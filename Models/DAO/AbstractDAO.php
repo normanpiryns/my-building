@@ -8,7 +8,7 @@ class AbstractDAO
 
     public function __construct ($table) {
         $this->table = $table;
-        $this->connection = new PDO('mysql:host=localhost;dbname=Mybuilding', 'root', '');
+        $this->connection = new PDO('mysql:host=localhost;dbname=mybuildings', 'root', '');
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 

@@ -1,7 +1,7 @@
 
 <?php
 
-    include('C:\wamp\www\MyBuilding\Views\Templates\head.php');
+    include('/Views/Templates/head.php');
 
 
     ?>
@@ -14,5 +14,5 @@
 
 <?php
 
-    include('C:\wamp\www\MyBuilding\Views\Templates\footer.php');
+    include('../Views/Templates/footer.php');
     ?>

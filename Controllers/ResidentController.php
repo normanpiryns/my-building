@@ -40,7 +40,8 @@ class ResidentController extends AbstractController
     }
     public function forms(){
 
+        include('../Views/Templates/head.php');
         include('../Views/Resident/Register.php');
-
+        include('../Views/Templates/footer.php');
     }
 }
