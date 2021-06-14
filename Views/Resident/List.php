@@ -44,5 +44,5 @@
     </table>
     <?php endif; ?>
     <div class="butt">
-        <button onclick="location.href='resident/insert'"  >Ajouter une espèce </button>
+        <button onclick="location.href='resident/insert'"  > Add a resident  </button>
     </div>
