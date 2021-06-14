@@ -2,6 +2,25 @@
 
 abstract class AbstractController {
 
+    public function getResident() {
+        if (!isset($_COOKIE['session_token'])) {
+            var_dump('no cookie!');
+            return false;
+        }
+
+        $residentDAO = new ResidentDAO();
+        return $residentDAO->fetchBySession($_COOKIE['session_token']);
+    }
+
+    public function isLogged() {
+        $resident = $this->getResident();
+        if(!$resident) {
+            include('../Views/Forms/Login.php');
+            die;
+        }
+        return $resident;
+    }
+
     public function create () {
         var_dump('no create');
     }

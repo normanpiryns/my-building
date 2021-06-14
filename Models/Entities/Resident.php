@@ -11,10 +11,13 @@ class Resident
     private $password;
     private $birthDate;
     private $appartment;
+    private $Session_token;
+    private $Session_time;
 
 
 
-    public function __construct($id,$firstName,$lastName,$telephone,$email,$password,$birthDate,$appartment=false){
+    public function __construct($id,$firstName,$lastName,$telephone,$email,$password,$birthDate,$appartment=false,
+                                $Session_token=false, $Session_time=false){
 
         $this->id = $id;
         $this->firstName = $firstName;
@@ -24,6 +27,8 @@ class Resident
         $this ->password = $password;
         $this ->birthDate=$birthDate;
         $this ->appartment =$appartment;
+        $this ->Session_token =$Session_token;
+        $this ->Session_time =$Session_time;
 
     }
 

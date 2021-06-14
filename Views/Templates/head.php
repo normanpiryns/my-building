@@ -32,7 +32,7 @@
 </head>
 <body>
 
-<div id="logo">
+<div id="logo" style="text-align:center;">
     <img src="Ressources/Pictures/banner.jpg" alt="cityview" title="building" style="height:300px; width:1200px" >
 </div>
 
