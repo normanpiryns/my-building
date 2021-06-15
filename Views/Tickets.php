@@ -2,7 +2,7 @@
 
 include('Templates/head.php');
 
-include('Appartment/List.php');
+include('Ticket/List.php');
 
 include('Templates/footer.php');
 
