@@ -1,7 +1,7 @@
 <?php
 
 
-class UserBoardController
+class UserBoardController extends AbstractController
 {
     public function index(){
 

@@ -1,7 +1,7 @@
 <?php
 
 
-class SyndicBoardController
+class SyndicBoardController extends AbstractController
 {
     public function index(){
 

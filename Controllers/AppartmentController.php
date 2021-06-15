@@ -1,7 +1,7 @@
 <?php
 
 
-class AppartmentController
+class AppartmentController extends AbstractController
 {public function __construct()
 {
     $this->dao = new AppartmentDAO();
@@ -10,7 +10,7 @@ class AppartmentController
     public function index()
     {
 
-        $resident = $this->dao->fetchAll();
+        $appartment = $this->dao->fetchAll();
         include('../Views/Appartment.php');
     }
     public function store ($id, $data) {
