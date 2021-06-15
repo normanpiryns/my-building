@@ -5,7 +5,7 @@
             <h1 class="text-center"></h1><hr><br>
             <div class="row animate__animated animate__pulse">
                 <div class="col-md-4 offset-md-4">
-                    <form method="POST" action="/resident/login">
+                    <form method="POST" action="/user/login">
                         <div class="form-group row">
                             <div class="col-sm-12">
                                 <input type="text" class="form-control" name="username"  placeholder="Username" id="username">

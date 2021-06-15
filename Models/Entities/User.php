@@ -1,21 +1,28 @@
 <?php
 
 
-class Syndic
+class User
 {
     private $id;
-    private $name;
-    private $email;
+    private $username;
     private $password;
+    private $email;
+    private $session_token;
+    private $session_time;
 
 
 
-    public function __construct($id,$name,$email,$password){
+
+    public function __construct($id,$username,$password,$email,$session_token=false,$session_time=false){
 
         $this->id = $id;
-        $this->name = $name;
-        $this->email = $email;
+        $this->username = $username;
         $this->password = $password;
+        $this->email = $email;
+        $this->session_token = $session_token;
+        $this->session_time = $session_time;
+
+
 
     }
 

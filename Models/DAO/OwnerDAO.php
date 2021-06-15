@@ -1,17 +1,17 @@
 <?php
 
 
-class ResidentDAO extends AbstractDAO
+class OwnerDAO extends AbstractDAO
 {
     public function __construct () {
 
-        parent::__construct('residents');
+        parent::__construct('owners');
     }
 
 
 
     function create ($result) {
-        return new Resident(
+        return new Owner(
             $result['id'],
             $result['firstName'],
             $result['lastName'],
@@ -24,25 +24,25 @@ class ResidentDAO extends AbstractDAO
 
 
     function deepCreate ($result) {
-        return new Resident(
+        return new Owner(
             $result['id'],
             $result['firstName'],
             $result['lastName'],
             $result['telephone'],
             $result['email'],
             $result['birthDate']
-
 
         );
     }
     public function createNew ($result) {
-        return new Resident(
+        return new Owner(
             $result['id'],
             $result['firstName'],
             $result['lastName'],
             $result['telephone'],
             $result['email'],
             $result['birthDate']
+
         );
     }
 
@@ -66,14 +66,14 @@ class ResidentDAO extends AbstractDAO
         $lastName = htmlspecialchars($_POST['lastName']);
         $telephone = htmlspecialchars($_POST['telephone']);
         $email = htmlspecialchars($_POST['email']);
-        $birthDate= htmlspecialchars($_POST['birthDate']);
+        $birthDate = htmlspecialchars($_POST['birthDate']);
 
-
-        $query= $this->connection ->query("INSERT INTO residents
+        $query= $this->connection ->query("INSERT INTO owners
     (firstName,lastName,telephone,email,birthDate)
     VALUES('$firstName','$lastName','$telephone','$email','$birthDate')");
 
 
     }
+
 
 }

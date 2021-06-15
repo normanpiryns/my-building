@@ -1,7 +1,7 @@
 <?php
 
 
-class Resident
+class Owner
 {
     private $id;
     private $firstName;
@@ -9,20 +9,19 @@ class Resident
     private $telephone;
     private $email;
     private $birthDate;
-    private $appartment;
 
 
 
 
-    public function __construct($id,$firstName,$lastName,$telephone,$email,$birthDate,$appartment=false){
+    public function __construct($id,$firstName,$lastName,$telephone,$email,$birthDate){
 
         $this->id = $id;
         $this->firstName = $firstName;
         $this->lastName = $lastName;
-        $this->telephone = $telephone;
-        $this ->email = $email;
-        $this ->birthDate=$birthDate;
-        $this ->appartment =$appartment;
+        $this->telephone= $telephone;
+        $this->email= $email;
+        $this->birthDate = $birthDate;
+
 
 
     }
@@ -38,6 +37,5 @@ class Resident
             $this->$prop = $value;
         }
     }
-
 
 }

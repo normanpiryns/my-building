@@ -1,20 +1,18 @@
 <?php
 
 
-
-
-class ResidentController extends AbstractController
+class UserController extends AbstractController
 {
     public function __construct()
     {
-        $this->dao = new ResidentDAO();
+        $this->dao = new UserDAO();
     }
 
     public function index()
     {
 
-        $resident = $this->dao->fetchAll();
-        include('../Views/Resident.php');
+        $user = $this->dao->fetchAll();
+        include('../Views/User.php');
     }
     public function store ($id, $data) {
         $this->dao->store($data);
@@ -24,14 +22,28 @@ class ResidentController extends AbstractController
     {
         var_dump('in register', $data);
         $this->store(false, $data);
-        header('Location:/resident');
+        header('Location:/user');
     }
 
+    public function login($id, $data)
+    {
+        $user = $this->dao->verify($data);
+        var_dump($user);
+        if ($user) {
 
+            $_SESSION['username']=$data['username'];
+            header('Location:/Userboard');
+
+        } else {
+            echo "Erreur au login";
+        }
+
+    }
     public function forms(){
 
         include('../Views/Templates/head.php');
         include('../Views/Resident/Register.php');
         include('../Views/Templates/footer.php');
     }
+
 }
