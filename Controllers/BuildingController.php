@@ -11,8 +11,13 @@ class BuildingController extends AbstractController
     public function index()
     {
 
-        $building = $this->dao->fetchAll();
-        include('../Views/Building.php');
+        $buildings = $this->dao->fetchAll();
+        $cityDao = new CityDAO();
+
+        // include('../Views/Building.php'); OLD
+        include('../Views/Templates/head.php');
+        include('../Views/Building/List.php');
+        include('../Views/Templates/footer.php');
     }
     public function store ($id, $data) {
         $this->dao->store($data);
@@ -32,5 +37,7 @@ class BuildingController extends AbstractController
         include('../Views/Building/Register.php');
         include('../Views/Templates/footer.php');
     }
+
+
 
 }

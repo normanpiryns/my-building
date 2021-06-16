@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2021 at 06:35 PM
+-- Generation Time: Jun 16, 2021 at 09:31 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -62,6 +62,13 @@ CREATE TABLE `cities` (
   `name` varchar(60) NOT NULL,
   `postcode` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cities`
+--
+
+INSERT INTO `cities` (`id`, `name`, `postcode`) VALUES
+(1, 'Test', 1234);
 
 -- --------------------------------------------------------
 
@@ -134,6 +141,13 @@ CREATE TABLE `syndics` (
   `email` varchar(60) NOT NULL,
   `password` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `syndics`
+--
+
+INSERT INTO `syndics` (`id`, `name`, `email`, `password`) VALUES
+(1, 'Pablo', 'pablo@mail.com', 'pwd');
 
 -- --------------------------------------------------------
 
@@ -233,13 +247,13 @@ ALTER TABLE `appartment`
 -- AUTO_INCREMENT for table `buildings`
 --
 ALTER TABLE `buildings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `cities`
 --
 ALTER TABLE `cities`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `communications`
@@ -263,7 +277,7 @@ ALTER TABLE `residents`
 -- AUTO_INCREMENT for table `syndics`
 --
 ALTER TABLE `syndics`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tickets`
@@ -286,8 +300,8 @@ ALTER TABLE `appartment`
 -- Constraints for table `buildings`
 --
 ALTER TABLE `buildings`
-  ADD CONSTRAINT `buildings.fk_city` FOREIGN KEY (`fk_city`) REFERENCES `buildings` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `buildings.fk_syndic` FOREIGN KEY (`fk_syndic`) REFERENCES `buildings` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `buildings.fk_city` FOREIGN KEY (`fk_city`) REFERENCES `cities` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `buildings.fk_syndic` FOREIGN KEY (`fk_syndic`) REFERENCES `syndics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `communications`

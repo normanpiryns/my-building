@@ -13,10 +13,10 @@ class BuildingDAO extends AbstractDAO
     function create ($result) {
         return new Building(
             $result['id'],
-            $result['name'],
             $result['street'],
             $result['number'],
-            $result['city']
+            $result['fk_city'],
+            $result['fk_syndic']
 
         );
     }
@@ -25,20 +25,20 @@ class BuildingDAO extends AbstractDAO
     function deepCreate ($result) {
         return new Building(
             $result['id'],
-            $result['name'],
             $result['street'],
             $result['number'],
-            $result['city']
+            $result['fk_city'],
+            $result['fk_syndic']
 
         );
     }
     public function createNew ($result) {
         return new Building(
             $result['id'],
-            $result['name'],
             $result['street'],
             $result['number'],
-            $result['city']
+            $result['fk_city'],
+            $result['fk_syndic']
 
         );
     }
@@ -59,14 +59,13 @@ class BuildingDAO extends AbstractDAO
     }
 
     function store ($data) {
-        $name = htmlspecialchars($_POST['name']);
         $street = htmlspecialchars($_POST['street']);
         $number = htmlspecialchars($_POST['number']);
         $city = htmlspecialchars($_POST['city']);
 
         $query= $this->connection ->query("INSERT INTO buildings
-    (name,street,number,city)
-    VALUES('$name','$street','$number','$city')");
+    (street,number,city)
+    VALUES('$street','$number','$city')");
 
 
     }

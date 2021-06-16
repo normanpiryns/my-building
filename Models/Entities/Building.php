@@ -4,22 +4,22 @@
 class Building
 {
     private $id;
-    private $name;
     private $street;
     private $number;
     private $city;
+    private $syndic;
 
 
 
 
 
-    public function __construct($id,$name,$street,$number,$city=false){
+    public function __construct($id,$street,$number,$city=false,$syndic=false){
 
         $this->id = $id;
-        $this->name = $name;
         $this->street = $street;
         $this->number = $number;
         $this->city= $city;
+        $this->syndic=$syndic;
 
 
     }
