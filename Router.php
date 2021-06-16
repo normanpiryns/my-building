@@ -16,7 +16,7 @@ class Router {
         $this->controllers = ['index'=>'HomeController','resident'=>'ResidentController','user' => 'UserController',
                               'Userboard'=> 'UserBoardController','appartment'=>'AppartmentController','owner'=> 'OwnerController',
                                 'city'=> "CityController",'building'=>'BuildingController','communication'=> 'CommunicationController',
-                                'ticket'=> 'TicketController','syndic'=>'SyndicBoardController'];
+                                'ticket'=> 'TicketController','syndic'=>'SyndicBoardController', 'logout'=>'LogoutController'];
         $this->request = array();
         $this->data = $this->parseURI($_SERVER['REQUEST_URI']);
         $this->dispatch();

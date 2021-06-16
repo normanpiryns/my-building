@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2021 at 06:35 PM
+-- Generation Time: Jun 16, 2021 at 11:41 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -31,11 +31,18 @@ USE `mybuildings`;
 
 CREATE TABLE `appartment` (
   `id` int(11) NOT NULL,
-  `number` int(11) NOT NULL,
-  `fk_building` int(11) NOT NULL,
-  `fk_owner` int(11) NOT NULL,
-  `rented` tinyint(1) NOT NULL
+  `number` int(11) DEFAULT NULL,
+  `building` int(11) DEFAULT NULL,
+  `owner` int(11) DEFAULT NULL,
+  `rented` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `appartment`
+--
+
+INSERT INTO `appartment` (`id`, `number`, `building`, `owner`, `rented`) VALUES
+(1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -45,11 +52,37 @@ CREATE TABLE `appartment` (
 
 CREATE TABLE `buildings` (
   `id` int(11) NOT NULL,
-  `street` varchar(60) NOT NULL,
-  `number` int(11) NOT NULL,
-  `fk_city` int(11) NOT NULL,
-  `fk_syndic` int(11) NOT NULL
+  `name` varchar(50) DEFAULT NULL,
+  `street` text DEFAULT NULL,
+  `number` int(10) DEFAULT NULL,
+  `city` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `buildings`
+--
+
+INSERT INTO `buildings` (`id`, `name`, `street`, `number`, `city`) VALUES
+(1, 'Résidence Fabiola', 'Rue de La Louve ', 5, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `build_com`
+--
+
+CREATE TABLE `build_com` (
+  `id` int(11) NOT NULL,
+  `building` int(11) DEFAULT NULL,
+  `message` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `build_com`
+--
+
+INSERT INTO `build_com` (`id`, `building`, `message`) VALUES
+(1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -59,9 +92,18 @@ CREATE TABLE `buildings` (
 
 CREATE TABLE `cities` (
   `id` int(11) NOT NULL,
-  `name` varchar(60) NOT NULL,
-  `postcode` int(11) NOT NULL
+  `name` varchar(50) DEFAULT NULL,
+  `postcode` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cities`
+--
+
+INSERT INTO `cities` (`id`, `name`, `postcode`) VALUES
+(1, 'La Louvière ', 7100),
+(2, 'Hannut', 4280),
+(3, 'Jumet', 6040);
 
 -- --------------------------------------------------------
 
@@ -71,24 +113,16 @@ CREATE TABLE `cities` (
 
 CREATE TABLE `communications` (
   `id` int(11) NOT NULL,
-  `fk_resident` int(11) NOT NULL,
-  `fk_syndic` int(11) NOT NULL,
-  `message` text NOT NULL,
-  `title` varchar(60) NOT NULL,
-  `description` text NOT NULL,
-  `dmy` date NOT NULL
+  `title` varchar(50) DEFAULT NULL,
+  `message` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `communication_resident`
+-- Dumping data for table `communications`
 --
 
-CREATE TABLE `communication_resident` (
-  `fk_communication` int(11) NOT NULL,
-  `fk_resident` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `communications` (`id`, `title`, `message`) VALUES
+(1, 'Welcome', 'Hi resident, \r\n\r\nWelcome to the new building ever built with high tech. \r\n\r\nWe hope you will find what you are looking for.\r\n\r\nthe syndic ');
 
 -- --------------------------------------------------------
 
@@ -98,12 +132,19 @@ CREATE TABLE `communication_resident` (
 
 CREATE TABLE `owners` (
   `id` int(11) NOT NULL,
-  `firstName` varchar(60) NOT NULL,
-  `lastName` varchar(60) NOT NULL,
-  `telephone` int(11) NOT NULL,
-  `email` varchar(60) NOT NULL,
-  `birthDate` varchar(60) NOT NULL
+  `firstName` varchar(50) DEFAULT NULL,
+  `lastName` varchar(50) DEFAULT NULL,
+  `telephone` text DEFAULT NULL,
+  `email` text DEFAULT NULL,
+  `birthDate` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `owners`
+--
+
+INSERT INTO `owners` (`id`, `firstName`, `lastName`, `telephone`, `email`, `birthDate`) VALUES
+(1, 'Gregory', 'Cuozzo', '0472454308', 'astro.informatique.cuozzo@gmail.com', '02/03/1989');
 
 -- --------------------------------------------------------
 
@@ -113,27 +154,21 @@ CREATE TABLE `owners` (
 
 CREATE TABLE `residents` (
   `id` int(11) NOT NULL,
-  `firstName` varchar(60) NOT NULL,
-  `lastName` varchar(60) NOT NULL,
-  `telephone` int(11) NOT NULL,
-  `email` varchar(60) NOT NULL,
-  `password` varchar(60) NOT NULL,
-  `birthDate` date NOT NULL,
-  `fk_appartment` int(11) NOT NULL
+  `firstName` varchar(50) DEFAULT NULL,
+  `lastName` varchar(50) DEFAULT NULL,
+  `telephone` text DEFAULT NULL,
+  `birthDate` text DEFAULT NULL,
+  `email` text DEFAULT NULL,
+  `appartment` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `syndics`
+-- Dumping data for table `residents`
 --
 
-CREATE TABLE `syndics` (
-  `id` int(11) NOT NULL,
-  `name` varchar(60) NOT NULL,
-  `email` varchar(60) NOT NULL,
-  `password` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `residents` (`id`, `firstName`, `lastName`, `telephone`, `birthDate`, `email`, `appartment`) VALUES
+(2, 'Norman ', 'piryns', 'don\'t want to be bothered', '1992-05-02', 'don\'t want to be bothered ', 1),
+(3, 'gregory', 'cuozzo', '0453135632', '1989-03-02', 'astro.informatique.cuozzo@gmail.com', NULL);
 
 -- --------------------------------------------------------
 
@@ -143,13 +178,42 @@ CREATE TABLE `syndics` (
 
 CREATE TABLE `tickets` (
   `id` int(11) NOT NULL,
-  `title` varchar(60) NOT NULL,
-  `description` varchar(60) NOT NULL,
-  `fk_resident` int(11) NOT NULL,
-  `fk_syndic` int(11) NOT NULL,
-  `message` text NOT NULL,
-  `status` tinyint(1) NOT NULL
+  `title` varchar(50) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `user` int(11) DEFAULT NULL,
+  `appartment` int(11) DEFAULT NULL,
+  `building` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tickets`
+--
+
+INSERT INTO `tickets` (`id`, `title`, `description`, `user`, `appartment`, `building`) VALUES
+(1, 'water leak', 'there is a leak in the bathroom ', 1, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `pwd` varchar(255) DEFAULT NULL,
+  `email` text DEFAULT NULL,
+  `session_token` varchar(255) DEFAULT NULL,
+  `session_time` datetime DEFAULT NULL,
+  `status` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `pwd`, `email`, `session_token`, `session_time`, `status`) VALUES
+(1, 'Gregory', '$2y$10$rB5l3o7rWw3bMjRsq1trTev69iBkDkLCb2bDzlPqrMtWsPEtmHuZi', 'gregg.ozzo@yahoo.com', 'ce7fc0780dcd4209.1623751885', NULL, '');
 
 --
 -- Indexes for dumped tables
@@ -160,16 +224,23 @@ CREATE TABLE `tickets` (
 --
 ALTER TABLE `appartment`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `appartment.fk_building` (`fk_building`),
-  ADD KEY `appartment.fk_owner` (`fk_owner`);
+  ADD KEY `fk_owner` (`owner`),
+  ADD KEY `fk_build` (`building`);
 
 --
 -- Indexes for table `buildings`
 --
 ALTER TABLE `buildings`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `buildings.fk_city` (`fk_city`),
-  ADD KEY `buildings.fk_syndic` (`fk_syndic`);
+  ADD KEY `fk_city` (`city`);
+
+--
+-- Indexes for table `build_com`
+--
+ALTER TABLE `build_com`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_building` (`building`),
+  ADD KEY `fk_message` (`message`);
 
 --
 -- Indexes for table `cities`
@@ -181,16 +252,7 @@ ALTER TABLE `cities`
 -- Indexes for table `communications`
 --
 ALTER TABLE `communications`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `communications.fk_resident` (`fk_resident`),
-  ADD KEY `communications.fk_syndic` (`fk_syndic`);
-
---
--- Indexes for table `communication_resident`
---
-ALTER TABLE `communication_resident`
-  ADD UNIQUE KEY `fk_communication` (`fk_communication`,`fk_resident`),
-  ADD KEY `communication_resident.fk_resident` (`fk_resident`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `owners`
@@ -203,21 +265,22 @@ ALTER TABLE `owners`
 --
 ALTER TABLE `residents`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `residents.fk_appartment` (`fk_appartment`);
-
---
--- Indexes for table `syndics`
---
-ALTER TABLE `syndics`
-  ADD PRIMARY KEY (`id`);
+  ADD KEY `fk_appartment` (`appartment`);
 
 --
 -- Indexes for table `tickets`
 --
 ALTER TABLE `tickets`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `tickets.fk_resident` (`fk_resident`),
-  ADD KEY `tickets.fk_syndic` (`fk_syndic`);
+  ADD KEY `fk_user` (`user`),
+  ADD KEY `fk_appartment` (`appartment`),
+  ADD KEY `fk_building` (`building`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -227,49 +290,55 @@ ALTER TABLE `tickets`
 -- AUTO_INCREMENT for table `appartment`
 --
 ALTER TABLE `appartment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `buildings`
 --
 ALTER TABLE `buildings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `build_com`
+--
+ALTER TABLE `build_com`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `cities`
 --
 ALTER TABLE `cities`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `communications`
 --
 ALTER TABLE `communications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `owners`
 --
 ALTER TABLE `owners`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `residents`
 --
 ALTER TABLE `residents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `syndics`
---
-ALTER TABLE `syndics`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
@@ -279,42 +348,35 @@ ALTER TABLE `tickets`
 -- Constraints for table `appartment`
 --
 ALTER TABLE `appartment`
-  ADD CONSTRAINT `appartment.fk_building` FOREIGN KEY (`fk_building`) REFERENCES `buildings` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `appartment.fk_owner` FOREIGN KEY (`fk_owner`) REFERENCES `owners` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_build` FOREIGN KEY (`building`) REFERENCES `buildings` (`id`),
+  ADD CONSTRAINT `fk_owner` FOREIGN KEY (`owner`) REFERENCES `owners` (`id`);
 
 --
 -- Constraints for table `buildings`
 --
 ALTER TABLE `buildings`
-  ADD CONSTRAINT `buildings.fk_city` FOREIGN KEY (`fk_city`) REFERENCES `buildings` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `buildings.fk_syndic` FOREIGN KEY (`fk_syndic`) REFERENCES `buildings` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_city` FOREIGN KEY (`city`) REFERENCES `cities` (`id`);
 
 --
--- Constraints for table `communications`
+-- Constraints for table `build_com`
 --
-ALTER TABLE `communications`
-  ADD CONSTRAINT `communications.fk_resident` FOREIGN KEY (`fk_resident`) REFERENCES `residents` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `communications.fk_syndic` FOREIGN KEY (`fk_syndic`) REFERENCES `syndics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `communication_resident`
---
-ALTER TABLE `communication_resident`
-  ADD CONSTRAINT `communication_resident.fk_communication` FOREIGN KEY (`fk_communication`) REFERENCES `communications` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `communication_resident.fk_resident` FOREIGN KEY (`fk_resident`) REFERENCES `residents` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `build_com`
+  ADD CONSTRAINT `fk_building` FOREIGN KEY (`building`) REFERENCES `buildings` (`id`),
+  ADD CONSTRAINT `fk_message` FOREIGN KEY (`message`) REFERENCES `communications` (`id`);
 
 --
 -- Constraints for table `residents`
 --
 ALTER TABLE `residents`
-  ADD CONSTRAINT `residents.fk_appartment` FOREIGN KEY (`fk_appartment`) REFERENCES `appartment` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_appartment` FOREIGN KEY (`appartment`) REFERENCES `appartment` (`id`);
 
 --
 -- Constraints for table `tickets`
 --
 ALTER TABLE `tickets`
-  ADD CONSTRAINT `tickets.fk_resident` FOREIGN KEY (`fk_resident`) REFERENCES `residents` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `tickets.fk_syndic` FOREIGN KEY (`fk_syndic`) REFERENCES `syndics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `tickets_ibfk_1` FOREIGN KEY (`user`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `tickets_ibfk_2` FOREIGN KEY (`appartment`) REFERENCES `appartment` (`id`),
+  ADD CONSTRAINT `tickets_ibfk_3` FOREIGN KEY (`building`) REFERENCES `buildings` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
