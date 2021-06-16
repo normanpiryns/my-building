@@ -32,7 +32,9 @@ class UserController extends AbstractController
         if ($user) {
 
             $_SESSION['username']=$data['username'];
-            header('Location:/Userboard');
+
+                header('Location:/Userboard');
+
 
         } else {
             echo "Erreur au login";
