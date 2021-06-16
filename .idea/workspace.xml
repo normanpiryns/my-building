@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23a384d3-bad8-4e37-9b46-5ce0071d1cbf" name="Default Changelist" comment="users'board view improved">
+    <list default="true" id="23a384d3-bad8-4e37-9b46-5ce0071d1cbf" name="Default Changelist" comment=" view improved">
+      <change afterPath="$PROJECT_DIR$/Controllers/LogoutController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Forms/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Forms/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/SyndicBoard.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/SyndicBoard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Userboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Userboard.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +16,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1tvYBeDnCubw7mywZWlihCbDf1c" />
@@ -61,7 +57,7 @@
       <workItem from="1623739396025" duration="16810000" />
       <workItem from="1623827875102" duration="7150000" />
       <workItem from="1623835180079" duration="178000" />
-      <workItem from="1623835681160" duration="5866000" />
+      <workItem from="1623835681160" duration="7093000" />
     </task>
     <task id="LOCAL-00001" summary="Router addition + index + htaccess file">
       <created>1623651297846</created>
@@ -189,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623838500812</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary=" view improved">
+      <created>1623841825072</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1623841825072</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +229,7 @@
     <MESSAGE value="try" />
     <MESSAGE value="sauve qui peut !!!!" />
     <MESSAGE value="users'board view improved" />
-    <option name="LAST_COMMIT_MESSAGE" value="users'board view improved" />
+    <MESSAGE value=" view improved" />
+    <option name="LAST_COMMIT_MESSAGE" value=" view improved" />
   </component>
 </project>

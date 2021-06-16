@@ -4,6 +4,24 @@ include('Templates/head.php');
 session_start();
 
 ?>
+<div style=" width:1300px; padding-left:150px">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+
+        <ul class="nav navbar-nav ">
+            <li class="nav-item"><a class="nav-link" href="index.php?page=add-student"><i class="fa fa-user-plus"></i> E-ticket </a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php?page=add-student"><i class="fa fa-user-plus"></i> Communication </a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php?page=add-student"><i class="fa fa-user-plus"></i> Users </a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php?page=user-profile"><i class="fa fa-user"></i> Owners </a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php?page=add-student"><i class="fa fa-user-plus"></i> Resident </a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php?page=add-student"><i class="fa fa-user-plus"></i> Building </a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php?page=add-student"><i class="fa fa-user-plus"></i> Appartment </a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php?page=add-student"><i class="fa fa-user-plus"></i> Cities </a></li>
+            <li class="nav-item"><a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i> log out  </a></li>
+        </ul>
+
+    </nav> <br>
+
+</div>
 
 
 
