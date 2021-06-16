@@ -73,59 +73,6 @@ session_start();
                     </div>
                 </div>
         </td>
-        <td>
-            <div class="col-sm-4">
-                <div class="card text-white bg-primary mb-3" style="width:250px">
-                    <div class="card-header">
-                        <div class="row">
-
-                            <div class="col-sm-8">
-                                <div class="float-sm-right">&nbsp;<span style="font-size: 30px"></span></div>
-                                <div class="clearfix"></div>
-                                <div class="float-sm-center" > <img src="/Ressources/Pictures/building.jpg" alt="E-tickets" titre="E-tickets" height="200px" width="200px">  </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-group-item-primary list-group-item list-group-item-action">
-                        <div class="row">
-                            <div class="float-sm-8">
-                                <a href="/ticket"><p class="">Users  </p></a>
-                                <hr>
-                                <p style="text-align:left;"> Looking for all registered members ? <br>
-                                    This link will show you the complete list <br><br> </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-        </td>
-        <td>
-            <div class="col-sm-4">
-                <div class="card text-white bg-primary mb-3" style="width:250px">
-                    <div class="card-header">
-                        <div class="row">
-
-                            <div class="col-sm-8">
-                                <div class="float-sm-right">&nbsp;<span style="font-size: 30px"></span></div>
-                                <div class="clearfix"></div>
-                                <div class="float-sm-center" > <img src="/Ressources/Pictures/building.jpg" alt="E-tickets" titre="E-tickets" height="200px" width="200px">  </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-group-item-primary list-group-item list-group-item-action">
-                        <div class="row">
-                            <div class="float-sm-8">
-                                <a href="/ticket"><p class="">Owners  </p></a>
-                                <hr>
-                                <p style="text-align:left;"> here, a complete list of every appartments'owners  <br>
-                                <br><br><br></p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-        </td>
-    </tr>
 
 
 </table>

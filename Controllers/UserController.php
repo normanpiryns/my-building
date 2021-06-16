@@ -21,8 +21,14 @@ class UserController extends AbstractController
     public function register($id, $data)
     {
         var_dump('in register', $data);
-        $this->store(false, $data);
-        header('Location:/user');
+        if ($data['username'] != 'Syndic'){
+            $this->store(false, $data);
+            header('Location:/index');
+
+        }else{
+            echo 'registration error, please chose another username ';
+        }
+        ;
     }
 
     public function login($id, $data)
@@ -32,12 +38,15 @@ class UserController extends AbstractController
         if ($user) {
 
             $_SESSION['username']=$data['username'];
-
+            if ($_SESSION['username']== 'Syndic'){
+                header('Location:/syndic');
+            }else {
                 header('Location:/Userboard');
+            }
 
 
         } else {
-            echo "Erreur au login";
+            echo "log error";
         }
 
     }
