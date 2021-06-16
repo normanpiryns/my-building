@@ -29,7 +29,7 @@ abstract class AbstractController {
         var_dump('no edit');
     }
 
-    public function delete ($id, $data) {
+    public function delete ($id) {
         var_dump('no delete');
     }
 

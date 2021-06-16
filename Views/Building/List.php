@@ -1,4 +1,4 @@
-<?php if (!empty($building)): ?>
+<?php if (!empty($buildings)): ?>
 
 
 <div style="margin-left:300px;margin-right:300px">
@@ -8,26 +8,40 @@
         <tr>
 
             <th scope="col">Name </th>
-            <th scope="col">street</th>
-            <th scope="col">number</th>
-            <th scope="col">city </th>
-            <th scope="col">Cancel </th>
+            <th scope="col">Street</th>
+            <th scope="col">Number</th>
+            <th scope="col">City</th>
+            <th scope="col">Postal code</th>
+            <th scope="col">Update </th>
+            <th scope="col">Delete </th>
+            
 
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($building as $build): ?>
+        <?php foreach ($buildings as $building): ?>
             <tr>
-                <td><?= $build->__get('name'); ?></td>
-                <td><?= $build->__get('street'); ?></td>
-                <td><?= $build->__get('number'); ?></td>
-                <td><?= $build->__get('city'); ?></td>
+                <td><?= $building->__get('name'); ?></td>
+                <td><?= $building->__get('street'); ?></td>
+                <td><?= $building->__get('number'); ?></td>
+                <td><?= $cityDao->getCityById($building->__get('city'))->__get('name') ?></td>
+                <td><?= $cityDao->getCityById($building->__get('city'))->__get('postcode'); ?></td>
+                
+
                 <td class="cell100 column2">
-                    <a href="building/delete?id=<?= $build -> __get('id')?>">
-                        <i class="fas fa-trash-alt"></i>
+                    <a href="/building/edit/<?= $building ->__get('id')?>">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
                     </a>
                 </td>
 
+
+                <td class="cell100 column2">
+                    <a href="/building/delete/<?= $building ->__get('id')?>">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+                </td>
+
+                
             </tr>
         <?php endforeach; ?>
 
@@ -36,6 +50,6 @@
     </table>
     <?php endif; ?>
     <div class="butt">
-        <button onclick="location.href='building/insert'"  > Add a building  </button>
+        <button onclick="location.href='/building/create'"  > Add a building  </button>
     </div>
 

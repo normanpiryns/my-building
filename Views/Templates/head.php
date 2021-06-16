@@ -21,10 +21,10 @@
 
 
     <!----------------------------------- Bootstrap CSS --------------------------------------------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="../css/fontawesome.min.css">
     <link rel="stylesheet" href="../css/solid.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/style.css">

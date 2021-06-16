@@ -11,26 +11,56 @@ class BuildingController extends AbstractController
     public function index()
     {
 
-        $building = $this->dao->fetchAll();
+        $buildings = $this->dao->fetchAll();
+        $cityDao = new CityDAO();
+
         include('../Views/Building.php');
     }
-    public function store ($id, $data) {
-        $this->dao->store($data);
-    }
 
-    public function register($id, $data)
-    {
-        var_dump('in register', $data);
-        $this->store(false, $data);
+    public function insert ($id, $data) {
+        $this->dao->store(false, $data);
         header('Location:/building');
     }
 
+    public function create()
+    {
 
-    public function forms(){
+        $cityDao = new CityDAO();
+        $cities = $cityDao->fetchAll();
 
         include('../Views/Templates/head.php');
         include('../Views/Building/Register.php');
         include('../Views/Templates/footer.php');
     }
+
+
+    
+
+    public function delete($id)
+    {
+        $this->dao->delete($id);
+        header('Location:/building');
+    }
+
+   public function update($id, $data)
+   {    
+        
+        $this->dao->update($id,$data);
+        header("Location:/building");
+   }
+
+   public function edit($id)
+   {    
+        $buildingDao = new BuildingDAO();
+        $cityDao = new CityDAO();
+
+        $building = $buildingDao->getBuildingById($id);
+        $cities = $cityDao->fetchAll();
+
+
+        include('../Views/Templates/head.php');
+        include('../Views/Building/edit.php');
+        include('../Views/Templates/footer.php');
+   }
 
 }
