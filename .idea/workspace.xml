@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="23a384d3-bad8-4e37-9b46-5ce0071d1cbf" name="Default Changelist" comment="try" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="1tvYBeDnCubw7mywZWlihCbDf1c" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Views/Ticket" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\MyBuilding\Views\Ticket" />
+      <recent name="C:\wamp\www\MyBuilding\Views\City" />
+      <recent name="C:\wamp\www\MyBuilding\Views\Building" />
+      <recent name="C:\wamp\www\MyBuilding\Views\Appartment" />
+      <recent name="C:\wamp\www\MyBuilding\Views\Communication" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\MyBuilding\Public\Ressources\Pictures" />
+      <recent name="C:\wamp\www\MyBuilding\Views\Resident" />
+      <recent name="C:\wamp\www\MyBuilding\Views" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="23a384d3-bad8-4e37-9b46-5ce0071d1cbf" name="Default Changelist" comment="" />
+      <created>1623650896132</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623650896132</updated>
+      <workItem from="1623650897532" duration="994000" />
+      <workItem from="1623651926570" duration="27387000" />
+      <workItem from="1623739396025" duration="16810000" />
+      <workItem from="1623827875102" duration="7150000" />
+      <workItem from="1623835180079" duration="178000" />
+    </task>
+    <task id="LOCAL-00001" summary="Router addition + index + htaccess file">
+      <created>1623651297846</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623651297846</updated>
+    </task>
+    <task id="LOCAL-00002" summary="home page addition">
+      <created>1623651701531</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623651701531</updated>
+    </task>
+    <task id="LOCAL-00003" summary="CSS addition">
+      <created>1623652293622</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623652293622</updated>
+    </task>
+    <task id="LOCAL-00004" summary="firts controllers addition">
+      <created>1623653004473</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1623653004473</updated>
+    </task>
+    <task id="LOCAL-00005" summary="management of : &#10;- syndics;&#10;- Resident;&#10;- a little front End&#10;- login page (front end )">
+      <created>1623663954030</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1623663954030</updated>
+    </task>
+    <task id="LOCAL-00006" summary="few corrections">
+      <created>1623665171488</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1623665171488</updated>
+    </task>
+    <task id="LOCAL-00007" summary="- resident register &#10;- login first try">
+      <created>1623685280676</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1623685280676</updated>
+    </task>
+    <task id="LOCAL-00008" summary="- update homeresident">
+      <created>1623686140339</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1623686140339</updated>
+    </task>
+    <task id="LOCAL-00009" summary="- update homeresident">
+      <created>1623686390363</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623686390363</updated>
+    </task>
+    <task id="LOCAL-00010" summary="entities &amp; DAO &amp; views added">
+      <created>1623758304366</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1623758304366</updated>
+    </task>
+    <task id="LOCAL-00011" summary="controllers added">
+      <created>1623759817252</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1623759817252</updated>
+    </task>
+    <task id="LOCAL-00012" summary="push&amp;commit parce que j'avais envie :/">
+      <created>1623760588637</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1623760588637</updated>
+    </task>
+    <task id="LOCAL-00013" summary="controllers updates">
+      <created>1623762003826</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1623762003826</updated>
+    </task>
+    <task id="LOCAL-00014" summary="CRUD : &#10;&#10;Read of all objects reviewed">
+      <created>1623830989094</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1623830989094</updated>
+    </task>
+    <task id="LOCAL-00015" summary="override ?">
+      <created>1623833487800</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1623833487800</updated>
+    </task>
+    <task id="LOCAL-00016" summary="try">
+      <created>1623835048013</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1623835048013</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Router addition + index" />
+    <MESSAGE value="Router addition + index + htaccess file" />
+    <MESSAGE value="home page addition" />
+    <MESSAGE value="CSS addition" />
+    <MESSAGE value="firts controllers addition" />
+    <MESSAGE value="management of : &#10;- syndics;&#10;- Resident;&#10;- a little front End&#10;- login page (front end )" />
+    <MESSAGE value="few corrections" />
+    <MESSAGE value="- resident register &#10;- login first try" />
+    <MESSAGE value="- update homeresident" />
+    <MESSAGE value="entities &amp; DAO &amp; views added" />
+    <MESSAGE value="controllers added" />
+    <MESSAGE value="push&amp;commit parce que j'avais envie :/" />
+    <MESSAGE value="controllers updates" />
+    <MESSAGE value="CRUD : &#10;&#10;Read of all objects reviewed" />
+    <MESSAGE value="override ?" />
+    <MESSAGE value="try" />
+    <option name="LAST_COMMIT_MESSAGE" value="try" />
+  </component>
+</project>
