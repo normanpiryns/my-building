@@ -1,5 +1,5 @@
 <?php
 
 include('Templates/head.php');
-include('Forms/register.php');
+include('User/List.php');
 include('Templates/footer.php');
