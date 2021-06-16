@@ -8,23 +8,20 @@ session_start();
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
 
         <ul class="nav navbar-nav ">
-            <li class="nav-item"><a class="nav-link" href="index.php?page=add-student"><i class="fa fa-user-plus"></i> E-ticket </a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php?page=add-student"><i class="fa fa-user-plus"></i> Communication </a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php?page=add-student"><i class="fa fa-user-plus"></i> Users </a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php?page=user-profile"><i class="fa fa-user"></i> Owners </a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php?page=add-student"><i class="fa fa-user-plus"></i> Resident </a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php?page=add-student"><i class="fa fa-user-plus"></i> Building </a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php?page=add-student"><i class="fa fa-user-plus"></i> Appartment </a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php?page=add-student"><i class="fa fa-user-plus"></i> Cities </a></li>
-            <li class="nav-item"><a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i> log out  </a></li>
+            <li class="nav-item"><a class="nav-link" href="/ticket"><i class="fa fa-user-plus"></i> E-ticket </a></li>
+            <li class="nav-item"><a class="nav-link" href="/communication"><i class="fa fa-user-plus"></i> Communication </a></li>
+            <li class="nav-item"><a class="nav-link" href="/user"><i class="fa fa-user-plus"></i> Users </a></li>
+            <li class="nav-item"><a class="nav-link" href="/owner"><i class="fa fa-user"></i> Owners </a></li>
+            <li class="nav-item"><a class="nav-link" href="/resident"><i class="fa fa-user-plus"></i> Resident </a></li>
+            <li class="nav-item"><a class="nav-link" href="/building"><i class="fa fa-user-plus"></i> Building </a></li>
+            <li class="nav-item"><a class="nav-link" href="/appartment"><i class="fa fa-user-plus"></i> Appartment </a></li>
+            <li class="nav-item"><a class="nav-link" href="/city"><i class="fa fa-user-plus"></i> Cities </a></li>
+            <li class="nav-item"><a class="nav-link" href="/logout"><i class="fa fa-power-off"></i> log out  </a></li>
         </ul>
 
     </nav> <br>
 
 </div>
-
-
-
 
 
 <h1 style="text-align:center;"> Management board</h1>
