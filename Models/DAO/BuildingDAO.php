@@ -60,7 +60,7 @@ class BuildingDAO extends AbstractDAO
     }
 
     function store ($id, $data) {
-        var_dump($data);
+
         
         try
         {
