@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("../Controllers/functions.php");
 
 class UserController extends AbstractController
 {
@@ -26,10 +27,21 @@ class UserController extends AbstractController
 
     public function register($id, $data)
     {
-        var_dump('in register', $data);
         if ($data['username'] != 'Syndic'){
-            $this->store(false, $data);
-            header('Location:/index');
+            if($data['username'] == "" || $data['password'] == '' || $data['email'] == '') {
+                echo "Please fill the fields";
+                return;
+            }
+            if(!CheckNumber($data['username'])){
+                echo "Username should not contain a number";
+                return;
+            }
+            else {
+                $this->store(false, $data);
+                header('Location:/index');
+            }
+
+            
 
         }else{
             echo 'registration error, please chose another username ';

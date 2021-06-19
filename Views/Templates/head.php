@@ -4,8 +4,14 @@
 
     <title> My building Home page  </title>
     <meta charset="UTF-8">
+    <!-- Jquery -->
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
 
     <!-------------------------------------- CSS links ---------------------------------------------------------------->
+    
 
     <link rel="stylesheet" href="../../CSS/table.css">
     <link rel="stylesheet" href ="../../CSS/picture.css">
