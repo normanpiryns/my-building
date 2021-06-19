@@ -4,7 +4,7 @@
 <div style="margin-left:300px;margin-right:300px">
     <h1 style="text-align:center;"> Tickets  list  </h1>
     <table class="table  table-striped table-hover table-bordered" id="data"  >
-        <thead class="thead-dark">
+        <thead class="table-primary">
         <tr>
 
             <th scope="col">Title </th>

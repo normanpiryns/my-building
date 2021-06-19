@@ -1,8 +1,7 @@
 
-
 <div style="padding-top:10px;margin-left:450px;">
     <div style="float:left; width:500px;padding-left:100px">
-        <h4 style="text-align:center;">  Login </h4>
+        <h4 class="title" >  Login </h4>
         <div class="container" ><br>
             <h1 class="text-center"></h1><hr><br>
             <div class="row animate__animated animate__pulse">

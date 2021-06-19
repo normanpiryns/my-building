@@ -4,18 +4,18 @@ include('Templates/head.php');
 session_start();
 
 ?>
-<div style=" width:1300px; padding-left:150px">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+<div  >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary " >
 
-        <ul class="nav navbar-nav ">
-            <li class="nav-item"><a class="nav-link" href="/ticket"><i class="fa fa-user-plus"></i> E-ticket </a></li>
-            <li class="nav-item"><a class="nav-link" href="/communication"><i class="fa fa-user-plus"></i> Communication </a></li>
+        <ul class="nav navbar-nav " style="padding-left:300px" >
+            <li class="nav-item"><a class="nav-link" href="/ticket"><i class="fa fa-inbox"></i> E-ticket </a></li>
+            <li class="nav-item"><a class="nav-link" href="/communication"><i class="fa fa-inbox"></i> Communication </a></li>
             <li class="nav-item"><a class="nav-link" href="/user"><i class="fa fa-user-plus"></i> Users </a></li>
-            <li class="nav-item"><a class="nav-link" href="/owner"><i class="fa fa-user"></i> Owners </a></li>
+            <li class="nav-item"><a class="nav-link" href="/owner"><i class="fa fa-user-plus"></i> Owners </a></li>
             <li class="nav-item"><a class="nav-link" href="/resident"><i class="fa fa-user-plus"></i> Resident </a></li>
-            <li class="nav-item"><a class="nav-link" href="/building"><i class="fa fa-user-plus"></i> Building </a></li>
-            <li class="nav-item"><a class="nav-link" href="/appartment"><i class="fa fa-user-plus"></i> Appartment </a></li>
-            <li class="nav-item"><a class="nav-link" href="/city"><i class="fa fa-user-plus"></i> Cities </a></li>
+            <li class="nav-item"><a class="nav-link" href="/building"><i class="fa fa-building"></i> Building </a></li>
+            <li class="nav-item"><a class="nav-link" href="/appartment"><i class="fa fa-building"></i> Appartment </a></li>
+            <li class="nav-item"><a class="nav-link" href="/city"><i class="fa fa-directions"></i> Cities </a></li>
             <li class="nav-item"><a class="nav-link" href="/logout"><i class="fa fa-power-off"></i> log out  </a></li>
         </ul>
 
@@ -24,9 +24,9 @@ session_start();
 </div>
 
 
-<h1 style="text-align:center;"> Management board</h1>
+<h1 class="title">Management board</h1>
 
-<table style="margin-left:200px">
+<table style="margin-left:200px;">
     <tr>
         <th><p> E-Tickets </p></th>
         <th><p>Communication</p></th>
