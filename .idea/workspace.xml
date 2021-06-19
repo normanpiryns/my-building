@@ -1,32 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23a384d3-bad8-4e37-9b46-5ce0071d1cbf" name="Default Changelist" comment="renewed">
-      <change afterPath="$PROJECT_DIR$/Public/CSS/essai.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Public/essai.css" afterDir="false" />
+    <list default="true" id="23a384d3-bad8-4e37-9b46-5ce0071d1cbf" name="Default Changelist" comment="front end in pain">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/CSS/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/CSS/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Appartment/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Appartment/List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Appartment/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Appartment/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Building/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Building/List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Building/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Building/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Building/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Building/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/City/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/City/List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/City/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/City/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/City/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/City/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Communication/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Communication/List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Forms/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Forms/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Owner/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Owner/List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Owner/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Owner/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Resident/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Resident/List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Resident/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Resident/Register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Resident/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Resident/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/SyndicBoard.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/SyndicBoard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Templates/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Templates/head.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Ticket/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Ticket/List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/User/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/User/List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/User/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/User/edit.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +70,7 @@
       <workItem from="1624090365611" duration="19439000" />
       <workItem from="1624112609680" duration="141000" />
       <workItem from="1624113478288" duration="3368000" />
-      <workItem from="1624125678331" duration="7034000" />
+      <workItem from="1624125678331" duration="8912000" />
     </task>
     <task id="LOCAL-00001" summary="Router addition + index + htaccess file">
       <created>1623651297846</created>
@@ -276,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624115996221</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="front end in pain">
+      <created>1624133044251</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1624133044251</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +303,7 @@
     <MESSAGE value="Ressources re added" />
     <MESSAGE value="CRUD" />
     <MESSAGE value="renewed" />
-    <option name="LAST_COMMIT_MESSAGE" value="renewed" />
+    <MESSAGE value="front end in pain" />
+    <option name="LAST_COMMIT_MESSAGE" value="front end in pain" />
   </component>
 </project>

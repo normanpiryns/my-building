@@ -64,7 +64,9 @@ class UserController extends AbstractController
 
 
         } else {
-            echo "log error";
+
+            header('Location:/home');
+
         }
 
     }
