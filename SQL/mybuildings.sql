@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2021 at 05:27 PM
+-- Generation Time: Jun 19, 2021 at 05:29 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -65,7 +65,7 @@ CREATE TABLE `buildings` (
 
 INSERT INTO `buildings` (`id`, `name`, `street`, `number`, `city`) VALUES
 (1, 'Residence Fabiola', 'Rue de La Louve ', 5, 3),
-(2, 'Maison de Dupont', 'Apple Street', 3, 3);
+(2, 'Residence de Dupont', 'Apple Street', 3, 3);
 
 -- --------------------------------------------------------
 
