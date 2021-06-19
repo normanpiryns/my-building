@@ -10,11 +10,12 @@ class Resident
     private $email;
     private $birthDate;
     private $appartment;
+    private $building;
 
 
 
 
-    public function __construct($id,$firstName,$lastName,$telephone,$email,$birthDate,$appartment=false){
+    public function __construct($id,$firstName,$lastName,$telephone,$email,$birthDate,$appartment=false, $building){
 
         $this->id = $id;
         $this->firstName = $firstName;
@@ -23,6 +24,7 @@ class Resident
         $this ->email = $email;
         $this ->birthDate=$birthDate;
         $this ->appartment =$appartment;
+        $this->building=$building;
 
 
     }

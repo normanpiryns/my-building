@@ -8,7 +8,7 @@
                 <input type="text" class="form-control" id="firstname" name="firstname" >
             </li>
             <li>
-                <label for="Lastname" class="form-label">Lastname : </label>
+                <label for="lastname" class="form-label">Lastname : </label>
                 <input type="text" class="form-control" id="lastname" name="lastname">
             </li>
             <li>
@@ -24,6 +24,20 @@
                 <label for="birthDate" class="form-label"> Birthdate :  </label><br>
                 <input type="date" class="form-control" id="birthDate" name="birthDate">
             </li>
+            <li>
+                <label for="appartment" class="form-label">Appartment : </label>
+                <input type="number" class="form-control" id="appartment" name="appartment">
+            </li>
+            
+            <li>
+                <label for="building" class="form-label"> City :  </label><br>
+                <select name="building" id="building">
+                    <?php foreach ($buildings as $building): ?>
+                        <option value="<?= $building->__get('id'); ?>"><?= $building->__get('name'); ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </li>
+            
 
 
             <li>

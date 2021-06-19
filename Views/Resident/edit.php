@@ -23,9 +23,17 @@
                     <input type="text" class="form-control" id="email" name="email" value="<?= $resident->__get('email');?>">
                 </li>
                 <li>
-                    <label for="birthdate" class="form-label"> Birthdate :  </label><br>
-                    <input type="date" class="form-control" id="birthdate" name="birthdate" value="<?= $resident->__get('birthDate');?>">
+                    <label for="birthDate" class="form-label"> Birthdate :  </label><br>
+                    <input type="date" class="form-control" id="birthDate" name="birthDate" value="<?= $resident->__get('birthDate');?>">
                 </li>
+                <li>
+                <label for="building" class="form-label"> Building :  </label><br>
+                <select name="building" id="building">
+                    <?php foreach ($buildings as $building): ?>
+                        <option value="<?= $building->__get('id'); ?><?php if ($building->__get('id') == $resident->__get('building')) echo "selected"; ?>"><?= $building->__get('name'); ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </li>
                 <li>
                     <label for="appartment" class="form-label"> Appartment :  </label><br>
                     <input type="number" class="form-control" id="appartment" name="appartment" value="<?= $resident->__get('appartment');?>">

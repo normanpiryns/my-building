@@ -13,7 +13,7 @@ class ResidentController extends AbstractController
     public function index()
     {
 
-        $resident = $this->dao->fetchAll();
+        $residents = $this->dao->fetchAll();
         $appartment = new AppartmentDAO();
         $building = new BuildingDAO();
         include('../Views/Resident.php');
@@ -49,6 +49,8 @@ class ResidentController extends AbstractController
     {
         $resiDao = new ResidentDAO();
         $resident = $resiDao->getResidentById($id);
+        $buildingDao = new BuildingDAO();
+        $buildings = $buildingDao->fetchAll();
 
         include('../Views/Templates/head.php');
         include('../Views/resident/edit.php');
@@ -63,6 +65,10 @@ class ResidentController extends AbstractController
 
     public function create()
     {
+        $buildingDao = new BuildingDAO();
+        $buildings = $buildingDao->fetchAll();
+       
+        
 
         include('../Views/Templates/head.php');
         include('../Views/Resident/register.php');
