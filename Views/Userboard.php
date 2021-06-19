@@ -16,8 +16,6 @@ session_start();
     <tr>
         <th><p> E-Tickets </p></th>
         <th><p>Communication</p></th>
-        <th><p>Users</p></th>
-        <th><p>Owners</p></th>
 
     </tr>
     <tr>
