@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23a384d3-bad8-4e37-9b46-5ce0071d1cbf" name="Default Changelist" comment="CRUD">
+    <list default="true" id="23a384d3-bad8-4e37-9b46-5ce0071d1cbf" name="Default Changelist" comment="renewed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/AppartmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AppartmentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/ResidentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ResidentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DAO/ResidentDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DAO/ResidentDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Appartment/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Appartment/List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Resident/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Resident/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Resident/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Resident/List.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +59,7 @@
       <workItem from="1623835180079" duration="178000" />
       <workItem from="1623835681160" duration="11997000" />
       <workItem from="1623958016437" duration="914000" />
-      <workItem from="1624090365611" duration="17702000" />
+      <workItem from="1624090365611" duration="18773000" />
     </task>
     <task id="LOCAL-00001" summary="Router addition + index + htaccess file">
       <created>1623651297846</created>
@@ -218,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624107696482</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="renewed">
+      <created>1624110780474</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1624110780474</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +263,7 @@
     <MESSAGE value=" view improved + logout" />
     <MESSAGE value="Ressources re added" />
     <MESSAGE value="CRUD" />
-    <option name="LAST_COMMIT_MESSAGE" value="CRUD" />
+    <MESSAGE value="renewed" />
+    <option name="LAST_COMMIT_MESSAGE" value="renewed" />
   </component>
 </project>

@@ -16,6 +16,7 @@
             <th scope="col">telephone</th>
             <th scope="col">email</th>
             <th scope="col">Birthdate </th>
+            <th scope="col"> Building</th>
             <th scope="col">apartment  </th>
             <th scope="col"> Update</th>
             <th scope="col">Cancel</th>
@@ -29,7 +30,8 @@
                 <td><?= $resi->__get('telephone'); ?></td>
                 <td><?= $resi->__get('email'); ?></td>
                 <td><?= $resi->__get('birthDate'); ?></td>
-                <td><?= $resi->__get('appartment'); ?></td>
+                <td><?= $building->getBuildingById($resi->__get('building'))->__get('name') ?></td>
+                <td><?= $appartment->getAppartmentById($resi->__get('appartment'))->__get('number') ?></td>
 
                 <td class="cell100 column2">
                     <a href="/resident/edit/<?= $resi ->__get('id')?>">

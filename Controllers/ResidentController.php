@@ -14,6 +14,8 @@ class ResidentController extends AbstractController
     {
 
         $resident = $this->dao->fetchAll();
+        $appartment = new AppartmentDAO();
+        $building = new BuildingDAO();
         include('../Views/Resident.php');
     }
     public function store ($id, $data) {
