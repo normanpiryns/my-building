@@ -1,21 +1,18 @@
 
 <div class="formulaire" style="margin-left:600px;margin-right:600px">
     <h1 style="text-align:center;"> User registration</h1> <hr>
-    <form action="/user/register" method="post" class="form-style-9">
+    <form action="/communication/insert" method="post" class="form-style-9">
         <ul>
             <li>
-                <label for="username" class="form-label">Username : </label>
-                <input type="text" class="form-control" id="username" name="username" >
+                <label for="title" class="form-label">Title : </label>
+                <input type="text" class="form-control" id="username" name="title" >
             </li>
 
             <li>
-                <label for="email" class="form-label"> E-mail : </label><br>
-                <input type="text" class="form-control" id="email" name="email">
+                <label for="message" class="form-label"> Message : </label><br>
+                <input type="text" class="form-control" id="message" name="message">
             </li>
-            <li>
-                <label for="password" class="form-label"> Password :  </label><br>
-                <input type="text" class="form-control" id="password" name="password">
-            </li>
+
             <hr>
             <li>
                 <div class="butt">

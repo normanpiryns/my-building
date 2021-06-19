@@ -36,8 +36,6 @@ class OwnerController extends AbstractController
     public function create()
     {
 
-        
-
         include('../Views/Templates/head.php');
         include('../Views/Owner/register.php');
         include('../Views/Templates/footer.php');

@@ -43,15 +43,16 @@ class AppartmentDAO extends AbstractDAO
         );
     }
 
-    function delete ($data) {
-        if(empty($data['id'])) {
+    function delete ($id) {
+        var_dump($id);
+        if(empty($id)) {
             return false;
         }
 
         try {
             $statement = $this->connection->prepare("DELETE FROM {$this->table} WHERE id = ?");
             $statement->execute([
-                $data['id']
+                $id
             ]);
         } catch(PDOException $e) {
             print $e->getMessage();
@@ -69,6 +70,20 @@ class AppartmentDAO extends AbstractDAO
     VALUES('$number','$building','$owner','$rented')");
 
 
+    }
+
+    public function getAppartmentById($id)
+    {
+        try {
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE id = ?");
+            $statement->execute([
+                $id
+            ]);
+            $result = $statement->fetch(PDO::FETCH_ASSOC);
+            return $this->create($result);
+        } catch (PDOException $e) {
+            print $e->getMessage();
+        }
     }
 
 

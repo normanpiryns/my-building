@@ -22,8 +22,12 @@ class ResidentController extends AbstractController
 
     public function register($id, $data)
     {
-        var_dump('in register', $data);
-        $this->store(false, $data);
+    var_dump('in register', $data);
+    $this->store(false, $data);
+    header('Location:/resident');
+}
+    public function insert ($id,$data) {
+        $this->dao->store(false,$data);
         header('Location:/resident');
     }
 
@@ -32,6 +36,30 @@ class ResidentController extends AbstractController
 
         include('../Views/Templates/head.php');
         include('../Views/Resident/Register.php');
+        include('../Views/Templates/footer.php');
+    }
+
+    public function edit($id)
+    {
+        $resiDao = new ResidentDAO();
+        $resident = $resiDao->getResidentById($id);
+
+        include('../Views/Templates/head.php');
+        include('../Views/resident/edit.php');
+        include('../Views/Templates/footer.php');
+    }
+
+    public function update($id, $data)
+    {
+        var_dump($id);
+        $this->dao->update($id,$data);
+        //header("Location:/resident");
+    }
+    public function create()
+    {
+
+        include('../Views/Templates/head.php');
+        include('../Views/Resident/register.php');
         include('../Views/Templates/footer.php');
     }
 }

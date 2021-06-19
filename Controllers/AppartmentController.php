@@ -34,4 +34,22 @@ class AppartmentController extends AbstractController
         include('../Views/Templates/footer.php');
     }
 
+
+    public function edit($id)
+    {
+        $appartDao = new AppartmentDAO();
+        $appartment = $appartDao->getAppartmentById($id);
+
+        include('../Views/Templates/head.php');
+        include('../Views/appartment/edit.php');
+        include('../Views/Templates/footer.php');
+    }
+
+    public function update($id, $data)
+    {
+
+        $this->dao->update($id,$data);
+        header("Location:/appartment");
+    }
+
 }

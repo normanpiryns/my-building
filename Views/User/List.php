@@ -9,7 +9,8 @@
 
             <th scope="col">Username </th>
             <th scope="col">Email</th>
-            <th scope="col">Cancel </th>
+            <th scope="col">Update </th>
+            <th scope="col"> Cancel</th>
 
         </tr>
         </thead>
@@ -19,8 +20,14 @@
                 <td><?= $per->__get('username'); ?></td>
                 <td><?= $per->__get('email'); ?></td>
                 <td class="cell100 column2">
-                    <a href="ticket/delete?id=<?= $per -> __get('id')?>">
-                        <i class="fas fa-trash-alt"></i>
+                    <a href="/user/edit/<?= $per ->__get('id')?>">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </a>
+                </td>
+
+                <td class="cell100 column2">
+                    <a href="/user/delete/<?=$per ->__get('id')?>">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
                     </a>
                 </td>
 
@@ -31,6 +38,6 @@
     </table>
     <?php endif; ?>
     <div class="butt">
-        <button onclick="location.href='ticket/insert'"  > Add a resident  </button>
+        <button onclick="location.href='/user/create"  > Add a user  </button>
     </div>
 

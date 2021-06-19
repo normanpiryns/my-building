@@ -47,15 +47,16 @@ class UserDAO extends AbstractDAO
         );
     }
 
-    function delete ($data) {
-        if(empty($data['id'])) {
+    function delete ($id) {
+        var_dump($id);
+        if(empty($id)){
             return false;
         }
 
         try {
             $statement = $this->connection->prepare("DELETE FROM {$this->table} WHERE id = ?");
             $statement->execute([
-                $data['id']
+                $id
             ]);
         } catch(PDOException $e) {
             print $e->getMessage();
@@ -102,6 +103,23 @@ class UserDAO extends AbstractDAO
             print $e->getMessage();
             return false;
         }
+    }
+
+    public function update($id, $data){
+
+        try {
+            $statement = $this->connection->prepare(
+                "UPDATE {$this->table} SET username = ?, email= ? WHERE id = ?");
+            $statement->execute([
+                htmlspecialchars($data['username']),
+                htmlspecialchars($data['email']),
+                htmlspecialchars($data['id'])
+
+            ]);
+        } catch (PDOException $e) {
+            print $e->getMessage();
+        }
+
     }
 
     public function setToken($user) {

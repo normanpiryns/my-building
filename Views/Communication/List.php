@@ -8,7 +8,8 @@
         <tr>
             <th scope="col">title </th>
             <th scope="col">message</th>
-            <th scope="col">Cancel </th>
+            <th scope="col">Update </th>
+            <th scope="col">Cancel</th>
 
         </tr>
         </thead>
@@ -18,8 +19,14 @@
                 <td><?= $com->__get('title'); ?></td>
                 <td><?= $com->__get('message'); ?></td>
                 <td class="cell100 column2">
-                    <a href="communication/delete?id=<?= $com -> __get('id')?>">
-                        <i class="fas fa-trash-alt"></i>
+                    <a href="/communication/edit/<?= $com ->__get('id')?>">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </a>
+                </td>
+
+                <td class="cell100 column2">
+                    <a href="/communication/delete/<?=$com ->__get('id')?>">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
                     </a>
                 </td>
 
@@ -31,6 +38,6 @@
     </table>
     <?php endif; ?>
     <div class="butt">
-        <button onclick="location.href='communication /insert'"  > Add a message  </button>
+        <button onclick="location.href='communication/create'"  > Add a communication  </button>
     </div>
 

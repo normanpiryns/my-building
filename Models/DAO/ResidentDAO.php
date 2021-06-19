@@ -46,34 +46,77 @@ class ResidentDAO extends AbstractDAO
         );
     }
 
-    function delete ($data) {
-        if(empty($data['id'])) {
+    function delete ($id) {
+        var_dump($id);
+        if(empty($id)) {
             return false;
         }
 
         try {
             $statement = $this->connection->prepare("DELETE FROM {$this->table} WHERE id = ?");
             $statement->execute([
-                $data['id']
+                $id
             ]);
         } catch(PDOException $e) {
             print $e->getMessage();
         }
     }
 
-    function store ($data) {
-        $firstName = htmlspecialchars($_POST['firstName']);
-        $lastName = htmlspecialchars($_POST['lastName']);
-        $telephone = htmlspecialchars($_POST['telephone']);
-        $email = htmlspecialchars($_POST['email']);
-        $birthDate= htmlspecialchars($_POST['birthDate']);
+    function store ($id,$data)
+    {
 
 
-        $query= $this->connection ->query("INSERT INTO residents
-    (firstName,lastName,telephone,email,birthDate)
-    VALUES('$firstName','$lastName','$telephone','$email','$birthDate')");
+        try {
+            $statement = $this->connection->prepare("INSERT INTO {$this->table} (firstName, lastName, telephone,  birthDate, email) VALUES (?,?,?,?,?)");
+
+            $statement->execute([
+                htmlspecialchars($data['firstname']),
+                htmlspecialchars($data['lastname']),
+                htmlspecialchars($data['telephone']),
+                htmlspecialchars($data['birthdate']),
+                htmlspecialchars($data['email'])
+
+            ]);
+        } catch (PDOException $e) {
+            print $e->getMessage();
+        }
+    }
 
 
+
+        public function update($id, $data){
+
+        try {
+            $statement = $this->connection->prepare(
+                "UPDATE {$this->table} SET firstName = ?, lastName = ?, telephone = ?, birthDate = ?,email = ?, appartment =?  WHERE id = ?");
+            $statement->execute([
+                htmlspecialchars($data['firstname']),
+                htmlspecialchars($data['lastname']),
+                htmlspecialchars($data['telephone']),
+                htmlspecialchars($data['birthdate']),
+                htmlspecialchars($data['email']),
+                htmlspecialchars($data['appartment']),
+                htmlspecialchars($data['id'])
+
+            ]);
+        } catch (PDOException $e) {
+            print $e->getMessage();
+        }
+
+    }
+
+    public function getResidentById($id)
+    {
+        try {
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE id = ?");
+            $statement->execute([
+                $id
+            ]);
+            $result = $statement->fetch(PDO::FETCH_ASSOC);
+            return $this->create($result);
+        } catch (PDOException $e) {
+            print $e->getMessage();
+        }
     }
 
 }

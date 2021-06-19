@@ -11,7 +11,8 @@
             <th scope="col">Building</th>
             <th scope="col">owner</th>
             <th scope="col">rent status </th>
-            <th scope="col">Cancel </th>
+            <th scope="col">Update </th>
+            <th scope="col"> Cancel</th>
 
         </tr>
         </thead>
@@ -23,8 +24,14 @@
                 <td><?= $appart->__get('owner'); ?></td>
                 <td><?= $appart->__get('rented'); ?></td>
                 <td class="cell100 column2">
-                    <a href="appartment/delete?id=<?= $appart -> __get('id')?>">
-                        <i class="fas fa-trash-alt"></i>
+                    <a href="/appartment/edit/<?= $appart ->__get('id')?>">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </a>
+                </td>
+
+                <td class="cell100 column2">
+                    <a href="/appartment/delete/<?=$appart->__get('id')?>">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
                     </a>
                 </td>
 

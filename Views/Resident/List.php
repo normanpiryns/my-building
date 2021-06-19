@@ -17,6 +17,8 @@
             <th scope="col">email</th>
             <th scope="col">Birthdate </th>
             <th scope="col">apartment  </th>
+            <th scope="col"> Update</th>
+            <th scope="col">Cancel</th>
         </tr>
         </thead>
         <tbody>
@@ -27,15 +29,19 @@
                 <td><?= $resi->__get('telephone'); ?></td>
                 <td><?= $resi->__get('email'); ?></td>
                 <td><?= $resi->__get('birthDate'); ?></td>
-
-
+                <td><?= $resi->__get('appartment'); ?></td>
 
                 <td class="cell100 column2">
-                    <a href="Resident/delete?id=<?= $resi -> __get('id')?>">
-                        <i class="fas fa-trash-alt"></i>
+                    <a href="/resident/edit/<?= $resi ->__get('id')?>">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
                     </a>
                 </td>
 
+                <td class="cell100 column2">
+                    <a href="/resident/delete/<?=$resi ->__get('id')?>">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+                </td>
             </tr>
         <?php endforeach; ?>
 
@@ -44,5 +50,5 @@
     </table>
     <?php endif; ?>
     <div class="butt">
-        <button onclick="location.href='resident/insert'"  > Add a resident  </button>
+        <button onclick="location.href='resident/create'"  > Add a resident  </button>
     </div>
