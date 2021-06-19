@@ -51,7 +51,7 @@ session_start();
                     <div class="list-group-item-primary list-group-item list-group-item-action">
                         <div class="row">
                             <div class="float-sm-8">
-                                <a href="/ticket"><p class="">E-tickets  </p></a>
+                                <a href="/ticket/handle"><p class="">E-tickets  </p></a>
                                 <hr>
                                 <p style="text-align:left;"> Here, you have the opportunity to create a ticket for maintenance <br>
                                     you can also have a follow-up for your own  tickets created </p>

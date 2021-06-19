@@ -10,7 +10,7 @@ class TicketController extends AbstractController
 
     public function index()
     {
-
+        $userDao = new UserDAO();
         $ticket = $this->dao->fetchAll();
         include('../Views/Tickets.php');
     }
@@ -32,5 +32,11 @@ class TicketController extends AbstractController
         include('../Views/Ticket/Register.php');
         include('../Views/Templates/footer.php');
     }
+
+    // public function handle(){
+    //     $userDao = new UserDAO();
+    //     $ticket = $this->dao->fetchAll();
+    //     include('../Views/Tickets.php');
+    // }
 
 }

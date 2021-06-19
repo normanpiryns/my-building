@@ -33,4 +33,41 @@ class OwnerController extends AbstractController
         include('../Views/Templates/footer.php');
     }
 
+    public function create()
+    {
+
+        
+
+        include('../Views/Templates/head.php');
+        include('../Views/Owner/register.php');
+        include('../Views/Templates/footer.php');
+    }
+
+    public function insert ($id, $data) {
+        $this->dao->store(false, $data);
+        header('Location:/owner');
+    }
+
+    public function edit($id)
+   {    
+        $ownerDao = new OwnerDAO();
+        $owner = $ownerDao->getOwnerById($id);
+
+        include('../Views/Templates/head.php');
+        include('../Views/owner/edit.php');
+        include('../Views/Templates/footer.php');
+   }
+
+   public function update($id, $data)
+   {    
+        
+        $this->dao->update($id,$data);
+        header("Location:/owner");
+   }
+
+   public function delete($id)
+    {
+        $this->dao->delete($id);
+        header('Location:/owner');
+    }
 }

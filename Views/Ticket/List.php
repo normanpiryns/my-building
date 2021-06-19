@@ -11,7 +11,8 @@
             <th scope="col">Description</th>
             <th scope="col">User</th>
             <th scope="col">Appartment </th>
-            <th scope="col">Cancel </th>
+            <th scope="col">Delete </th>
+            <th scope="col">State</th>
 
         </tr>
         </thead>
@@ -20,11 +21,11 @@
             <tr>
                 <td><?= $tick->__get('title'); ?></td>
                 <td><?= $tick->__get('description'); ?></td>
-                <td><?= $tick->__get('user'); ?></td>
+                <td><?= $userDao->getUserById($tick->__get('user'))->__get('username'); ?></td>
                 <td><?= $tick->__get('appartment'); ?></td>
                 <td class="cell100 column2">
-                    <a href="ticket/delete?id=<?= $tick -> __get('id')?>">
-                        <i class="fas fa-trash-alt"></i>
+                    <a href="ticket/delete/<?= $tick -> __get('id')?>">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
                     </a>
                 </td>
 
@@ -35,6 +36,6 @@
     </table>
     <?php endif; ?>
     <div class="butt">
-        <button onclick="location.href='ticket/insert'"  > Add a resident  </button>
+        <button onclick="location.href='ticket/create'"  > Add a ticket  </button>
     </div>
 
