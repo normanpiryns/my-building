@@ -30,7 +30,7 @@
                 <td><?= $resi->__get('telephone'); ?></td>
                 <td><?= $resi->__get('email'); ?></td>
                 <td><?= $resi->__get('birthDate'); ?></td>
-                <td><?= $building->getBuildingById($resi->__get('building'))->__get('name') ?></td>
+                <td><?= $building->getBuildingById($resi->__get('buildings'))->__get('name') ?></td>
                 <td><?= $appartment->getAppartmentById($resi->__get('appartment'))->__get('number') ?></td>
 
                 <td class="cell100 column2">

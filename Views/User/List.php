@@ -37,7 +37,5 @@
         </tbody>
     </table>
     <?php endif; ?>
-    <div class="butt">
-        <button onclick="location.href='/user/create"  > Add a user  </button>
-    </div>
+
 
