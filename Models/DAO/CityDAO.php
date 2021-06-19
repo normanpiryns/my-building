@@ -37,30 +37,37 @@ class CityDAO extends AbstractDAO
         );
     }
 
-    function delete ($data) {
-        if(empty($data['id'])) {
+    function delete ($id) {
+        var_dump($id);
+        if(empty($id)) {
             return false;
         }
 
         try {
             $statement = $this->connection->prepare("DELETE FROM {$this->table} WHERE id = ?");
             $statement->execute([
-                $data['id']
+                $id
             ]);
         } catch(PDOException $e) {
             print $e->getMessage();
         }
     }
 
-    function store ($data) {
-        $name = htmlspecialchars($_POST['name']);
-        $postcode = htmlspecialchars($_POST['postcode']);
+    function store ($id, $data) {
+        var_dump($data);
 
+        try
+        {
+            $statement = $this->connection->prepare("INSERT INTO {$this->table} (name, postcode) VALUES (?,?)");
 
-        $query= $this->connection ->query("INSERT INTO cities
-    (name,postcode)VALUES('$name','$postcode')");
+            $statement->execute([
+                htmlspecialchars($data['name']),
+                htmlspecialchars($data['postcode']),
 
-
+            ]);
+        } catch(PDOException $e) {
+            print $e->getMessage();
+        }
     }
 
     public function getCityById($id)
@@ -75,6 +82,23 @@ class CityDAO extends AbstractDAO
         } catch (PDOException $e) {
             print $e->getMessage();
         }
+    }
+
+    public function update($id, $data){
+
+        try {
+            $statement = $this->connection->prepare(
+                "UPDATE {$this->table} SET name = ?, postcode = ?WHERE id = ?");
+            $statement->execute([
+                htmlspecialchars($data['name']),
+                htmlspecialchars($data['postcode']),
+                htmlspecialchars($data['id'])
+
+            ]);
+        } catch (PDOException $e) {
+            print $e->getMessage();
+        }
+
     }
 
 

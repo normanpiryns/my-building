@@ -58,9 +58,9 @@ class BuildingController extends AbstractController
         $cities = $cityDao->fetchAll();
 
 
-        include('../Views/Templates/head.php');
-        include('../Views/Building/edit.php');
-        include('../Views/Templates/footer.php');
+
+        include('../Views/Buildingedit.php');
+
    }
 
 }

@@ -10,7 +10,8 @@
 
             <th scope="col">Name </th>
             <th scope="col">Postcode</th>
-            <th scope="col">Cancel </th>
+            <th scope="col">Update </th>
+            <th scope="col"> Cancel</th>
 
         </tr>
         </thead>
@@ -20,8 +21,14 @@
                 <td><?= $cit->__get('name'); ?></td>
                 <td><?= $cit->__get('postcode'); ?></td>
                 <td class="cell100 column2">
-                    <a href="building/delete?id=<?= $cit -> __get('id')?>">
-                        <i class="fas fa-trash-alt"></i>
+                    <a href="/city/edit/<?= $cit ->__get('id')?>">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </a>
+                </td>
+
+                <td class="cell100 column2">
+                    <a href="/city/delete/<?=$cit ->__get('id')?>">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
                     </a>
                 </td>
 
@@ -31,6 +38,6 @@
     </table>
     <?php endif; ?>
     <div class="butt">
-        <button onclick="location.href='city/insert'"  > Add a city  </button>
+        <button onclick="location.href='city/create'"  > Add a city  </button>
     </div>
 

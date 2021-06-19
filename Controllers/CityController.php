@@ -14,8 +14,10 @@ class CityController extends AbstractController
         $city = $this->dao->fetchAll();
         include('../Views/City.php');
     }
-    public function store ($id, $data) {
-        $this->dao->store($data);
+    public function insert ($id, $data) {
+        $this->dao->store(false,$data);
+        header('Location:/city');
+
     }
 
     public function register($id, $data)
@@ -26,11 +28,34 @@ class CityController extends AbstractController
     }
 
 
-    public function forms(){
+    public function create(){
 
         include('../Views/Templates/head.php');
         include('../Views/City/Register.php');
         include('../Views/Templates/footer.php');
+    }
+
+    public function edit($id)
+    {
+        $CityDao = new CityDAO();
+        $city = $CityDao->getCityById($id);
+
+        include('../Views/Templates/head.php');
+        include('../Views/city/edit.php');
+        include('../Views/Templates/footer.php');
+    }
+
+    public function update($id, $data)
+    {
+
+        $this->dao->update($id,$data);
+        header("Location:/city");
+    }
+
+    public function delete($id)
+    {
+        $this->dao->delete($id);
+        header('Location:/city');
     }
 
 }
