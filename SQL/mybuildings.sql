@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2021 at 11:41 AM
+-- Generation Time: Jun 19, 2021 at 05:27 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -42,7 +42,8 @@ CREATE TABLE `appartment` (
 --
 
 INSERT INTO `appartment` (`id`, `number`, `building`, `owner`, `rented`) VALUES
-(1, 1, 1, 1, 1);
+(1, 1, 1, 1, 1),
+(2, 1, 2, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -63,7 +64,8 @@ CREATE TABLE `buildings` (
 --
 
 INSERT INTO `buildings` (`id`, `name`, `street`, `number`, `city`) VALUES
-(1, 'Résidence Fabiola', 'Rue de La Louve ', 5, 1);
+(1, 'Residence Fabiola', 'Rue de La Louve ', 5, 3),
+(2, 'Maison de Dupont', 'Apple Street', 3, 3);
 
 -- --------------------------------------------------------
 
@@ -159,16 +161,16 @@ CREATE TABLE `residents` (
   `telephone` text DEFAULT NULL,
   `birthDate` text DEFAULT NULL,
   `email` text DEFAULT NULL,
-  `appartment` int(11) DEFAULT NULL
+  `appartment` int(11) DEFAULT NULL,
+  `building` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `residents`
 --
 
-INSERT INTO `residents` (`id`, `firstName`, `lastName`, `telephone`, `birthDate`, `email`, `appartment`) VALUES
-(2, 'Norman ', 'piryns', 'don\'t want to be bothered', '1992-05-02', 'don\'t want to be bothered ', 1),
-(3, 'gregory', 'cuozzo', '0453135632', '1989-03-02', 'astro.informatique.cuozzo@gmail.com', NULL);
+INSERT INTO `residents` (`id`, `firstName`, `lastName`, `telephone`, `birthDate`, `email`, `appartment`, `building`) VALUES
+(2, 'Norman ', 'Piryns', '+32 493 419 480', '1997-07-08', 'normanpiryns@gmail.com', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -182,15 +184,16 @@ CREATE TABLE `tickets` (
   `description` text DEFAULT NULL,
   `user` int(11) DEFAULT NULL,
   `appartment` int(11) DEFAULT NULL,
-  `building` int(11) DEFAULT NULL
+  `building` int(11) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tickets`
 --
 
-INSERT INTO `tickets` (`id`, `title`, `description`, `user`, `appartment`, `building`) VALUES
-(1, 'water leak', 'there is a leak in the bathroom ', 1, 1, 1);
+INSERT INTO `tickets` (`id`, `title`, `description`, `user`, `appartment`, `building`, `status`) VALUES
+(1, 'water leak', 'there is a leak in the bathroom ', 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -213,7 +216,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `pwd`, `email`, `session_token`, `session_time`, `status`) VALUES
-(1, 'Gregory', '$2y$10$rB5l3o7rWw3bMjRsq1trTev69iBkDkLCb2bDzlPqrMtWsPEtmHuZi', 'gregg.ozzo@yahoo.com', 'ce7fc0780dcd4209.1623751885', NULL, '');
+(1, 'Gregory', '$2y$10$rB5l3o7rWw3bMjRsq1trTev69iBkDkLCb2bDzlPqrMtWsPEtmHuZi', 'gregg.ozzo@yahoo.com', 'abfdeba9b1d83496.1624104480', NULL, ''),
+(6, 'Syndic', '$2y$10$FhNjMxcHofhlrNOH2oNxr.lEVyvqv9qXlE2Bq6jLs285xxr45fwvG', 'Syndic@ifosup.com', 'cbaa84378d45089f.1624115486', NULL, NULL),
+(7, 'Norman', '$2y$10$LhCVLheMFAghq8s8y/coQ.0iL00Aj8CEokzedDFuS/m9.ZjYWjU2a', 'bemerauld@gmail.com', '2b0ad87693bd4770.1624113419', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -290,13 +295,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `appartment`
 --
 ALTER TABLE `appartment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `buildings`
 --
 ALTER TABLE `buildings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `build_com`
@@ -326,19 +331,19 @@ ALTER TABLE `owners`
 -- AUTO_INCREMENT for table `residents`
 --
 ALTER TABLE `residents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
