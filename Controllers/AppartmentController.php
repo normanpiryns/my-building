@@ -5,13 +5,17 @@ class AppartmentController extends AbstractController
 {public function __construct()
 {
     $this->dao = new AppartmentDAO();
-    $this->dao = new BuildingDAO();
+
+
+
 }
 
     public function index()
     {
-        $building = $this->dao->fetchAll();
         $appartment = $this->dao->fetchAll();
+        $building = new BuildingDAO();
+        $Owner = new OwnerDAO();
+
         include('../Views/Appartment.php');
     }
     public function store ($id, $data) {

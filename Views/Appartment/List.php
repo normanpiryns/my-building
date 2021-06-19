@@ -20,8 +20,8 @@
         <?php foreach ($appartment as $appart): ?>
             <tr>
                 <td><?= $appart->__get('number'); ?></td>
-                <td><?= $appart->__get('building'); ?></td>
-                <td><?= $appart->__get('owner'); ?></td>
+                <td><?= $building->getBuildingById($appart->__get('building'))->__get('name') ?></td>
+                <td><?= $Owner->getOwnerById($appart->__get('owner'))->__get('firstName') ?></td>
                 <td><?= $appart->__get('rented'); ?></td>
                 <td class="cell100 column2">
                     <a href="/appartment/edit/<?= $appart ->__get('id')?>">

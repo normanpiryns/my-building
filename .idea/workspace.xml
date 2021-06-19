@@ -1,38 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23a384d3-bad8-4e37-9b46-5ce0071d1cbf" name="Default Changelist" comment="Ressources re added">
-      <change afterPath="$PROJECT_DIR$/Views/Appartment/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Buildingedit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/City/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Communication/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Resident/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Templates/nav.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/User/edit.php" afterDir="false" />
+    <list default="true" id="23a384d3-bad8-4e37-9b46-5ce0071d1cbf" name="Default Changelist" comment="CRUD">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/AppartmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AppartmentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/BuildingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/BuildingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/CityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/CityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/CommunicationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/CommunicationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/OwnerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/OwnerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/ResidentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ResidentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DAO/AppartmentDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DAO/AppartmentDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DAO/CityDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DAO/CityDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DAO/CommunicationDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DAO/CommunicationDAO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/DAO/ResidentDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DAO/ResidentDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DAO/UserDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DAO/UserDAO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Appartment/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Appartment/List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Building/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Building/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/City/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/City/List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/City/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/City/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Communication/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Communication/List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Communication/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Communication/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Owner.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Owner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Owner/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Owner/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Resident/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Resident/List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Resident/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Resident/Register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/User/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/User/List.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Resident/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Resident/edit.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +62,7 @@
       <workItem from="1623835180079" duration="178000" />
       <workItem from="1623835681160" duration="11997000" />
       <workItem from="1623958016437" duration="914000" />
-      <workItem from="1624090365611" duration="14823000" />
+      <workItem from="1624090365611" duration="17702000" />
     </task>
     <task id="LOCAL-00001" summary="Router addition + index + htaccess file">
       <created>1623651297846</created>
@@ -236,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623843340982</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="CRUD">
+      <created>1624107696482</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1624107696482</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +258,7 @@
     <MESSAGE value=" view improved" />
     <MESSAGE value=" view improved + logout" />
     <MESSAGE value="Ressources re added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ressources re added" />
+    <MESSAGE value="CRUD" />
+    <option name="LAST_COMMIT_MESSAGE" value="CRUD" />
   </component>
 </project>

@@ -31,7 +31,11 @@ class ResidentController extends AbstractController
         header('Location:/resident');
     }
 
-
+    public function delete($id)
+    {
+        $this->dao->delete($id);
+        header('Location:/resident');
+    }
     public function forms(){
 
         include('../Views/Templates/head.php');
@@ -48,13 +52,13 @@ class ResidentController extends AbstractController
         include('../Views/resident/edit.php');
         include('../Views/Templates/footer.php');
     }
-
     public function update($id, $data)
     {
-        var_dump($id);
+
         $this->dao->update($id,$data);
-        //header("Location:/resident");
+        header("Location:/resident");
     }
+
     public function create()
     {
 

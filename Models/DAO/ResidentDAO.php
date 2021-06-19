@@ -88,14 +88,14 @@ class ResidentDAO extends AbstractDAO
 
         try {
             $statement = $this->connection->prepare(
-                "UPDATE {$this->table} SET firstName = ?, lastName = ?, telephone = ?, birthDate = ?,email = ?, appartment =?  WHERE id = ?");
+                "UPDATE {$this->table} SET firstName = ?, lastName = ?, telephone = ?, birthDate = ?,email = ? WHERE id = ?");
             $statement->execute([
                 htmlspecialchars($data['firstname']),
                 htmlspecialchars($data['lastname']),
                 htmlspecialchars($data['telephone']),
                 htmlspecialchars($data['birthdate']),
                 htmlspecialchars($data['email']),
-                htmlspecialchars($data['appartment']),
+
                 htmlspecialchars($data['id'])
 
             ]);

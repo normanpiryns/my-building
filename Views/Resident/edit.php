@@ -1,5 +1,5 @@
 <div class="formulaire" style="margin-left:600px;margin-right:600px">
-    <h2 style="text-align:center"> Owner's update </h1> <hr>
+    <h2 style="text-align:center"> resident's update </h1> <hr>
         <form action="/resident/update" method="post" class="form-style-9">
             <ul style="list-style: none;">
 
@@ -21,6 +21,10 @@
                 <li>
                     <label for="email" class="form-label"> Email :  </label><br>
                     <input type="text" class="form-control" id="email" name="email" value="<?= $resident->__get('email');?>">
+                </li>
+                <li>
+                    <label for="birthdate" class="form-label"> Birthdate :  </label><br>
+                    <input type="date" class="form-control" id="birthdate" name="birthdate" value="<?= $resident->__get('birthDate');?>">
                 </li>
                 <li>
                     <label for="appartment" class="form-label"> Appartment :  </label><br>
