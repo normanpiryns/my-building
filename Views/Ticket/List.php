@@ -1,4 +1,4 @@
-<?php if (!empty($ticket)): ?>
+<?php if (!empty($tickets)): ?>
 
 
 <div style="margin-left:300px;margin-right:300px">
@@ -9,25 +9,18 @@
 
             <th scope="col">Title </th>
             <th scope="col">Description</th>
-            <th scope="col">User</th>
             <th scope="col">Appartment </th>
-            <th scope="col">Delete </th>
-            <th scope="col">State</th>
+           
 
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($ticket as $tick): ?>
+        <?php foreach ($tickets as $ticket): ?>
             <tr>
-                <td><?= $tick->__get('title'); ?></td>
-                <td><?= $tick->__get('description'); ?></td>
-                <td><?= $userDao->getUserById($tick->__get('user'))->__get('username'); ?></td>
-                <td><?= $tick->__get('appartment'); ?></td>
-                <td class="cell100 column2">
-                    <a href="ticket/delete/<?= $tick -> __get('id')?>">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                    </a>
-                </td>
+                <td><?= $ticket->__get('title'); ?></td>
+                <td><?= $ticket->__get('description'); ?></td>
+                <td><?= $ticket->__get('appartment'); ?></td>
+                
 
             </tr>
         <?php endforeach; ?>
@@ -36,6 +29,6 @@
     </table>
     <?php endif; ?>
     <div class="butt">
-        <button onclick="location.href='ticket/create'"  > Add a ticket  </button>
+        <button onclick="location.href='/ticket/create'"  > Add a ticket  </button>
     </div>
 

@@ -153,4 +153,19 @@ class UserDAO extends AbstractDAO
         }
     }
 
+    public function getIdByUsername($username)
+    {
+        try {
+            $statement = $this->connection->prepare("SELECT id FROM {$this->table} WHERE username = ?");
+            $statement->execute([
+                $username
+            ]);
+            $result = $statement->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        } catch (PDOException $e) {
+            print $e->getMessage();
+        }
+    }
+
+
 }

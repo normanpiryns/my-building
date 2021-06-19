@@ -49,7 +49,4 @@ abstract class AbstractController {
         var_dump('no index');
     }
 
-    // public function handle (){
-    //     var_dump('no handle');
-    // }
 }

@@ -11,8 +11,9 @@
             <th scope="col">Description</th>
             <th scope="col">User</th>
             <th scope="col">Appartment </th>
-            <th scope="col">Delete </th>
             <th scope="col">State</th>
+            <th scope="col">Delete </th>
+          
 
         </tr>
         </thead>
@@ -23,19 +24,24 @@
                 <td><?= $tick->__get('description'); ?></td>
                 <td><?= $userDao->getUserById($tick->__get('user'))->__get('username'); ?></td>
                 <td><?= $tick->__get('appartment'); ?></td>
+                
+                <td>
+                    <?php switch($tick->__get("status")){ case NULL: echo 'Non traité'; break; case 0: echo 'En attente'; break; case 1: echo 'Traité'; break;} ?> 
+                    <a href="/ticket/edit/<?= $tick ->__get('id')?>">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </a>
+                </td>
                 <td class="cell100 column2">
-                    <a href="ticket/delete/<?= $tick -> __get('id')?>">
+                    <a href="/ticket/delete/<?= $tick -> __get('id')?>">
                         <i class="fa fa-trash" aria-hidden="true"></i>
                     </a>
                 </td>
-
+               
             </tr>
         <?php endforeach; ?>
 
         </tbody>
     </table>
     <?php endif; ?>
-    <div class="butt">
-        <button onclick="location.href='ticket/create'"  > Add a ticket  </button>
-    </div>
+    
 
