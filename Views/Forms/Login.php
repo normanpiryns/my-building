@@ -21,7 +21,7 @@
                         <div class="text-center">
                             <button type="submit" name="login" class="btn btn-warning"> Login </button>
                         </div><br>
-                        <p ><a href="/user/forms"> Register here  </a>  </p>
+                        <p ><a href="/user/create"> Register here  </a>  </p>
                     </form>
                 </div>
              </div>
